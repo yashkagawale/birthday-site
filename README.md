@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Birthday Surprise Website 🎂🎉
 
-## Getting Started
+This is a special **Birthday Celebration Website** created using **Next.js, Tailwind CSS, Framer Motion**, and **Lucide Icons**.  
+It's designed as a personal and emotional way to wish someone special — when you can't be there physically, let your code speak! 💖
 
-First, run the development server:
+---
+
+## 🧠 Project Idea
+
+> **POV:** It's her birthday, but you can't meet — so you build something special instead.
+
+The website features:
+
+- A live countdown timer ⏳
+- Personalized birthday messages 🎈
+- Smooth animations using Framer Motion ✨
+- Cute icons and a heartfelt design 💌
+
+This was created as part of an emotional reel where the journey begins with a few lines of code in VS Code and ends with a beautiful surprise on the browser.
+
+---
+
+## 🛠️ Built With
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lucide Icons](https://lucide.dev/)
+
+---
+
+## 🔧 Setup
+
+To run this project locally:
 
 ```bash
+git clone https://github.com/Anuj579/birthday-site.git
+cd birthday-site
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure to update the target date in `Home` component if you want to reuse this.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Connect with Me
 
-## Learn More
+Follow for more such creative and code-based content!
 
-To learn more about Next.js, take a look at the following resources:
+- 📸 **Instagram**: [@anujbuilds](https://instagram.com/anujbuilds)
+- 🎥 **YouTube**: [@anujbuilds](https://youtube.com/@anujbuilds)
+- 🐦 **Twitter/X**: [@anujbuilds](https://twitter.com/anujbuilds)
+- 💼 **LinkedIn**: [Anuj Chaudhary](https://linkedin.com/in/anujchaudhary549)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thanks for checking out this project! If you liked it, consider giving it a ⭐️ on GitHub and sharing the reel ❤️
