@@ -110,7 +110,7 @@ function Loader() {
 
         {/* Cute emojis */}
         <div className="flex justify-center space-x-4 mt-5">
-          {["🎂", "✨", "🎁", "💖", "🎈"].map((emoji, i) => (
+          {[ "✨", "💖", "🌹"].map((emoji, i) => (
             <motion.span
               key={i}
               className="text-xl"
