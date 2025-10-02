@@ -17,7 +17,7 @@ export default function Home() {
   const [bubbles, setBubbles] = useState([]);
   const [showForYouBtn, setShowForYouBtn] = useState(false);
   const [showCarousel, setShowCarousel] = useState(false); // New state
-  const birthdayDate = new Date("October 01, 2025");
+  const birthdayDate = new Date("October 03, 2025");
   const audioRef = useRef(null);
 
   useEffect(() => {
