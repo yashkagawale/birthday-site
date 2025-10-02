@@ -2,14 +2,18 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  Heart,
-  Sparkles,
-  Gift
-} from "lucide-react";
+import { Heart, Sparkles, Gift, MoveRight, PartyPopper } from "lucide-react";
 
-export default function BirthdayCelebration() {
+export default function BirthdayCelebration({ onNext }) {
   const [isCardOpen, setIsCardOpen] = useState(false);
+  const [isLoadingNext, setIsLoadingNext] = useState(false);
+
+  const handleNextClick = () => {
+    setIsLoadingNext(true);
+    setTimeout(() => {
+      onNext(); // trigger carousel after 2s
+    }, 2000);
+  };
 
   return (
     <div className="flex flex-col items-center">
@@ -24,18 +28,19 @@ export default function BirthdayCelebration() {
         }}
         className="relative mb-2"
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-center text-pink-600 mb-2">
-          Happy Birthday!
+        <h1 className="text-3xl sm:text-2xl font-bold text-center text-pink-600 mb-2">
+          Celebrating Us, Today and Always
         </h1>
         <div className="flex justify-center gap-3">
           <Heart className="w-8 h-8 text-pink-500" />
           <Sparkles className="w-8 h-8 text-yellow-500" />
         </div>
-        <h3 className="text-2xl sm:text-3xl font-bold text-center text-pink-600 mt-2">
+        <h3 className="text-xl sm:text-2xl font-bold text-center text-pink-600 mt-2">
           To My Cutiepie
         </h3>
       </motion.div>
 
+      {/* Anniversary Card */}
       <motion.div
         className="w-full max-w-md mx-auto my-6"
         initial={{ opacity: 0, y: 20 }}
@@ -68,7 +73,7 @@ export default function BirthdayCelebration() {
 
             <div className="text-center text-white">
               <p className="text-lg font-medium mb-4">
-                Tap to {isCardOpen ? "close" : "open"} your card
+                Tap to {isCardOpen ? "close" : "open"} card
               </p>
               <div className="flex justify-center">
                 <motion.div
@@ -87,7 +92,7 @@ export default function BirthdayCelebration() {
             </div>
           </div>
 
-          {/* Card content */}
+          {/* Card Content */}
           <AnimatePresence>
             {isCardOpen && (
               <motion.div
@@ -109,22 +114,10 @@ export default function BirthdayCelebration() {
                     you.
                   </p>
                   <p className="text-pink-600 font-medium">
-                    I hope your birthday is full of love, magic, and everything
-                    that makes you smile 💖
+                    Happy first anniversary, my love! Wishing us a day filled
+                    with love, magic, and all the little moments that make our
+                    hearts smile.
                   </p>
-                  <div className="flex justify-center">
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.2, 1],
-                      }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Number.POSITIVE_INFINITY,
-                      }}
-                    >
-                      <Heart className="w-8 h-8 stroke-none fill-rose-500" />
-                    </motion.div>
-                  </div>
                 </div>
               </motion.div>
             )}
@@ -132,6 +125,7 @@ export default function BirthdayCelebration() {
         </div>
       </motion.div>
 
+      {/* Message Section */}
       <motion.div
         className="w-full max-w-md mt-4"
         initial={{ opacity: 0 }}
@@ -140,8 +134,12 @@ export default function BirthdayCelebration() {
       >
         <div className="text-center">
           <p className="text-lg text-purple-700 mb-4">
-            May every wish you make today come true. You deserve the world, and
-            I’ll always be here to remind you of that.
+            I can’t believe it’s already been 12 months since we started this
+            journey together. Today we celebrate a year full of beautiful
+            memories, laughter, little adventures, and even the ups and downs
+            that made us stronger. Thank you for always understanding me, for
+            being by my side through it all, and for filling my life with love
+            and joy.
           </p>
           <div className="flex justify-center items-center gap-2">
             <p className="text-pink-600 font-medium">
@@ -149,6 +147,43 @@ export default function BirthdayCelebration() {
             </p>
           </div>
         </div>
+      </motion.div>
+
+      {/* Romantic Button */}
+      <motion.div
+        key="start-button"
+        className="flex flex-col items-center justify-center mt-8"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+      >
+        {isLoadingNext ? (
+          <motion.div
+            className="text-pink-600 font-medium text-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            Loading next surprise...
+          </motion.div>
+        ) : (
+          <motion.button
+            onClick={handleNextClick}
+            className="bg-gradient-to-r z-10 from-pink-500 to-purple-500 shadow-lg hover:shadow-xl transition-all rounded-full font-medium text-white py-4 px-8 cursor-pointer border-2 border-white flex items-center gap-3"
+            whileTap={{ scale: 0.95 }}
+            animate={{
+              y: [0, -5, 0],
+              scale: [1, 1.03, 1],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Number.POSITIVE_INFINITY,
+            }}
+          >
+            <PartyPopper className="w-6 h-6" />
+            <span className="text-xl">Another Surprise</span>
+            <MoveRight className="w-5 stroke-3 h-6" />
+          </motion.button>
+        )}
       </motion.div>
     </div>
   );
