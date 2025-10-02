@@ -6,8 +6,14 @@ import FloatingHeartsBackground from "./FloatingHeartsBackground"; // fluttering
 
 const images = [
   { src: "/img1.jpg", caption: "October, the month our journey began💕" },
-  { src: "/img2.jpg", caption: "Sunsets at Juhu Beach, our favorite shared moments 🌅❤️" },
-  { src: "/img3.jpg", caption: "Our sixth-month photo—still warms my heart ❤️" },
+  {
+    src: "/img2.jpg",
+    caption: "Sunsets at Juhu Beach, our favorite shared moments 🌅❤️",
+  },
+  {
+    src: "/img3.jpg",
+    caption: "Our sixth-month photo—still warms my heart ❤️",
+  },
   { src: "/img4.jpg", caption: "Pure happiness in one frame ✨" },
   { src: "/img5.jpg", caption: "Moments we’ll cherish forever 🌹" },
   { src: "/img6.jpg", caption: "Laughing, loving, living together 🫶" },
@@ -76,13 +82,15 @@ export default function ImageCarousel() {
         </div>
 
         {/* Mobile carousel */}
-        <div className="md:hidden relative w-full">
+        <div className="md:hidden relative w-full flex justify-center">
+          {" "}
+          {/* added flex justify-center */}
           <motion.div
             key={current}
-            initial={{ opacity: 0, y: 20, rotate: -2 + Math.random() * 4 }} // random tilt -2° to +2°
+            initial={{ opacity: 0, y: 20, rotate: -2 + Math.random() * 4 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="bg-white shadow-lg overflow-hidden flex flex-col items-center w-70"
+            className="bg-white shadow-lg overflow-hidden flex flex-col items-center w-72 mx-auto" // added mx-auto
           >
             {images[current].placeholder ? (
               <motion.div
