@@ -86,7 +86,7 @@ export default function ImageCarousel() {
           >
             {images[current].placeholder ? (
               <motion.div
-                className="w-full h-72 flex flex-col items-center justify-center bg-pink-50 rounded-lg border-2 border-pink-200 p-6"
+                className="w-full h-72 flex flex-col items-center justify-center bg-pink-50 rounded-lg border-2 border-pink-200 p-2"
                 animate={{
                   boxShadow: [
                     "0 0 10px rgba(255,182,193,0.5)",
@@ -109,7 +109,7 @@ export default function ImageCarousel() {
                     className="w-full h-72 object-cover"
                   />
                 </div>
-                <div className="w-full bg-white px-4 py-6">
+                <div className="w-full bg-white px-2 py-2">
                   <p className="text-center text-pink-600 font-medium italic tracking-wide">
                     {images[current].caption}
                   </p>

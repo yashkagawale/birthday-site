@@ -109,7 +109,7 @@ export default function BirthdayCelebration({ onNext }) {
               >
                 <div className="text-center">
                   <p className="text-purple-700 mb-2">
-                    Just wanted to remind you—you're my favorite person. My days
+                    Just wanted to remind you, you're my favorite person. My days
                     are better, smiles are wider, and life is sweeter because of
                     you.
                   </p>
