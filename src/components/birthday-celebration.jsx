@@ -114,7 +114,7 @@ export default function BirthdayCelebration({ onNext }) {
                     you.
                   </p>
                   <p className="text-pink-600 font-medium">
-                    Happy first anniversary, my love! Wishing us a day filled
+                    Happy one year, my love! Wishing us a day filled
                     with love, magic, and all the little moments that make our
                     hearts smile.
                   </p>

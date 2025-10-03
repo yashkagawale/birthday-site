@@ -19,7 +19,7 @@ const images = [
   { src: "/img6.jpg", caption: "Laughing, loving, living together 🫶" },
   {
     placeholder: true,
-    caption: "Our first anniversary photo—A memory we’ll hold close forever 💖",
+    caption: "Creating more memories to hold close forever...💖",
   },
 ];
 
